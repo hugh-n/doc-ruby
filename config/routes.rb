@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # LOG IN MODULE
   get 'login' => 'pages#login'
+  get 'register' => 'pages#register'
 
   resources :posts
-  
 end
