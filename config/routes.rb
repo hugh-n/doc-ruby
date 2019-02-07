@@ -3,10 +3,13 @@ Rails.application.routes.draw do
 
   # DEFAULT HOME PAGE 
   root 'posts#index'
+  get 'home' => 'posts#index'
 
   # LOG IN MODULE
   get 'login' => 'pages#login'
   get 'register' => 'pages#register'
+
+  # USER ACCOUNT
 
   resources :posts
 end

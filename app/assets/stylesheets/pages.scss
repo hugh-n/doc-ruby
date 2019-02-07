@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:600);
+//@import url(https://fonts.googleapis.com/css?family=Roboto:600);
+
+$font-family: 'Century Gothic', sans-serif;
+$font-weight: 600;
 
 body{
 	background: #7CBC5E;
@@ -100,7 +103,8 @@ body{
 }
 
 h1 {
-	font-family: "Roboto", sans-serif;
+	font-family: $font-family;
+  font-weight: $font-weight;
 	text-transform: uppercase;
 	color: #7CBC5E;
 }
