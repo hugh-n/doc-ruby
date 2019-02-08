@@ -1,3 +1,220 @@
 // Place all the styles related to the Accounts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+_vars.scss
+*/
+
+$text-color: #efefef;
+$accent: #FFF;
+$font-weight-bold: 600;
+
+/*
+_layout.scss
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #191919;
+}
+
+/*
+_nav.scss
+*/
+.top {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  display: grid;
+  grid-template-columns: 2.5rem auto 2.5rem;
+  height: 5rem;
+  background: #7CBC5E;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+    0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+}
+
+.nav {
+  grid-column-start: 2;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: $text-color;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  &__item {
+    transition: 0.3s ease;
+    list-style-type: none;
+    height: inherit;
+    box-shadow: inset 0 0rem 0 $accent;
+    &--active {
+      color: $accent;
+      box-shadow: inset 0 -0.4rem 0 $accent;
+    }
+    &:hover {
+      color: $accent;
+      box-shadow: inset 0 -0.4rem 0 $accent;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    &--text {
+      font-weight: 600;
+      margin-left: 0.5rem;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    &--left {
+      grid-column-start: 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+    &--right {
+      grid-column-start: 3;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__brand {
+    grid-column-start: 2;
+    justify-self: center;
+    color: $accent;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    border-right: 0.1rem solid #FFF;
+    height: 2.5rem;
+    &--input {
+      height: 2.5rem;
+      margin-right: 1rem;
+      width: 100%;
+      min-width: 20rem;
+      background: #FFF;
+      border: 0;
+      color: #47AD5D;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+    &--icon {
+      color: #FFF;
+    }
+  }
+  &__avatar {
+    margin: 0 1rem;
+    color: $accent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:hover .nav__avatar--dropdown {
+      display: flex;
+      color: #ccc;
+    }
+    &--dropdown {
+      background: #7CBC5E;
+      display: none;
+      flex-direction: column;
+      z-index: 9999999;
+      padding: 1rem;
+      top: 4rem;
+      left: 50%;
+      transform: translate(-50%);
+      position: absolute;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19),
+        0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
+      &:hover {
+        display: flex;
+      }
+      &:before {
+        position: relative;
+        top: -2rem;
+        left: 4rem;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #7CBC5E;
+      }
+      button {
+        padding: 0.75rem 2.5rem;
+        margin: 0 0 1rem 0;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    &--image {
+      font-size: 3rem;
+      position: relative;
+    }
+  }
+  &__btn {
+    background: $accent;
+    border: 0;
+    color: #7CBC5E;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100rem;
+    margin-left: 1rem;
+  }
+}
+
+.col-md-3 {
+    margin: 46px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 2px 6px 24px #888888;
+}
+.img1 {
+    max-width: 100px;
+    margin: 20px;margin-right: 20px;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+h3{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+}
+h6 {
+    font-size: 12px;
+    font-weight: $font-weight-bold;
+    margin-top: -7px;
+}
