@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   root 'contents#index'
   resources :contents
 
+  # USER ACCOUNT
+  get 'user_profile' => 'accounts#user_account'
+
 end
