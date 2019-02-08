@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # DEFAULT HOME PAGE 
-  root 'posts#index'
-  resources :posts
+  root 'contents#index'
+  resources :contents
 
   # SIGN UP ROUTE
   #get  '/signup',  to: 'users#new'
@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   
 
   # CONTENT
-  get    '/board', to: 'contents#index'
-  resources :contents
+  #get    '/board', to: 'contents#index'
+  #resources :contents
 end
