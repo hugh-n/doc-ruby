@@ -1,16 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<%= @content.user.email %>
-<p>
-  <strong>Title:</strong>
-  <%= @content.title %>
-</p>
-
-<div style="width:400px; height:auto">
+<div class="col-md-3">
+    <div class="sidebar-title">
+      <h2><%= @content.title %></h2>
+    </div>
+    <div style="margin-top: 0px; text-align: center">
+      <h6><%= @content.user.email %></h6>
+    </div>
+      <!-- <div class="sidebar-text">
+       <p>横連書ざはす資理ぽちぴ報月わ況大しけーえ社難サモ陛断きざふれ築治ケスヤ雪料提権ゅず濯浜びは決無巨論寿せいやぴ。</p>
+      </div> -->
+      <div align="center">
 	<%= image_tag(@content.image, style:'width:100%') %>
-</div>
-
-<%= link_to 'Edit', edit_content_path(@content) %> |
+    </div>
+      <%= link_to 'Edit', edit_content_path(@content) %> |
 <%= link_to 'Back', contents_path %>
-
-
+  </div>

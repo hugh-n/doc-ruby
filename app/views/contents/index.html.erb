@@ -1,31 +1,53 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Contents</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="board-container">
+  <div class="col-md-3">
+    <div class="sidebar-title">
+      <h2>My Profile</h2>
+    </div>
+    <div align="center">
+      <img class="img2" style="height:100px; width:100px" src="https://i.pinimg.com/originals/20/1d/ba/201dbacf47ce26cac9af7189cfa64fad.jpg">
+    </div>
+    <div style="margin-top: 0px; text-align: center">
+      <h3>John Doe</h3>
+      <h6>@johndoe</h6>
+    </div>
+      <div class="sidebar-text">
+       <p>横連書ざはす資理ぽちぴ報月わ況大しけーえ社難サモ陛断きざふれ築治ケスヤ雪料提権ゅず濯浜びは決無巨論寿せいやぴ。</p>
+      </div>
+  </div>
+  <!-- <div class="col-md-6">
+    <div class="post" style="height: 100px">
+      <div class="form-group">
+        <textarea class="form-control" rows="2" id="post" placeholder="Write about your day here."></textarea>
+        <button type="button" class="btn btn-success" style="float: right; margin: 5px;">Create Post</button> 
+        <button type="button" class="btn btn-success" style="float: left; margin: 5px;"><i class="fa fa-image fa-2x" style="font-size: 20px;float: right;"></i></button>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-md-6">
+    <div align="right" style="padding: 10px;">
+    <%= link_to 'New Content', new_content_path, :class => "btn btn-success" %>
+  </div>
     <% @contents.each do |content| %>
-      <tr>
-        <td><%= content.title %></td>
-        <td><%= content.user.email %></td>
-        <td><%= link_to 'Show', content %></td>
-        <% if content.user == current_user %>
-          <td><%= link_to 'Edit', edit_content_path(content) %></td>
-          <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!-- Post sample without the image. -->
+  <div class="tweetEntry">
+  <div class="tweetEntry-content">
+    <a class="tweetEntry-account-group" href="[accountURL]">
+      <strong class="tweetEntry-fullname"><%= content.title %></strong>
+      <span class="tweetEntry-username">@<b><%= content.user.email %></b></span>
+      <span class="tweetEntry-timestamp">- [timestamp]</span>
+      <!-- <i class="fa fa-edit" style="font-size: 18px;float: right; width: 50px;"></i>
+      <i class="fa fa-trash-o" style="font-size: 18px;float: right; width: 50px"></i> -->
+    </a>
+    <div class="tweetEntry-text-container">
+      <%= link_to 'Show', content %>
+    </div>
+    
+  </div>
+  </div>  
+  <% end %>
+  
+</div>
+</div>
+</div>
 
-<br>
-
-<%= link_to 'New Content', new_content_path %>
