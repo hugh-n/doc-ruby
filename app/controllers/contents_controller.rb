@@ -6,6 +6,7 @@ class ContentsController < ApplicationController
   # GET /contents.json
   def index
     @contents = Content.all
+    @user = current_user.email
   end
 
   # GET /contents/1
