@@ -233,7 +233,6 @@ _nav.scss
 .tweetEntry-content {
   display: block;
   font-size: 14px;
-  margin-left: 58px;
   font-size: 14px;
 }
 .tweetEntry-account-group {
@@ -241,13 +240,6 @@ _nav.scss
   padding: 0px;
   text-decoration: none;
   line-height: 20px;
-}
-.tweetEntry-avatar {
-  float: left;
-  height: 48px;
-  width: 48px;
-  margin-left: -58px;
-  border-radius: 5px;
 }
 .tweetEntry-fullname {
   font-weight: bold;
@@ -341,7 +333,6 @@ h6 {
 .tweetEntry-content {
   display: block;
   font-size: 14px;
-  margin-left: 58px;
   font-size: 14px;
 }
 .tweetEntry-account-group {
@@ -398,6 +389,14 @@ h6 {
   font-family: Arial, sans-serif;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
-  color: #7CBC5E;
+  color: #73A2BD;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: #73A2BD;
   font-size: 20px;
 }
