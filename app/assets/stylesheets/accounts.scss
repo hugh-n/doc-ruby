@@ -230,12 +230,6 @@ _nav.scss
   margin: auto;
   border-radius: 5px;
 }
-.tweetEntry {
-  border-bottom: 1px solid #e1e8ed;
-  cursor: pointer;
-  min-height: 51px;
-  padding: 9px 12px;
-}
 .tweetEntry-content {
   display: block;
   font-size: 14px;
@@ -325,7 +319,7 @@ h6 {
 }
 
 .tweetEntry {
-  border-bottom: 1px solid #e1e8ed;
+  border-top: 1px solid #e1e8ed;
   cursor: pointer;
   min-height: 51px;
   padding: 9px 12px;
@@ -360,9 +354,10 @@ h6 {
   line-height: 18px;
 }
 .tweetEntry-text-container img{
-  width: 100%;
+  width: 75%;
+  margin: auto;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .optionalMedia {
@@ -394,3 +389,4 @@ h2 {
   color: #73A2BD;
   font-size: 20px;
 }
+

@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents
   # GET /contents.json
   def index
-    @contents = Content.all
+    @contents = Content.order('created_at DESC').all
     @user = current_user.email
   end
 

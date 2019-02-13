@@ -4,12 +4,12 @@
 
 //@import url(https://fonts.googleapis.com/css?family=Roboto:600);
 
-$font-family: 'Century Gothic', sans-serif;
+$font-family: 'Source Sans Pro', sans-serif;
 $font-weight: 600;
 
 body{
 	background: #B8D0DE;
-	font-family: "Roboto", sans-serif;
+	font-family: $font-family;
 }
 
 .login-page {

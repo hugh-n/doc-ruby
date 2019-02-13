@@ -10,8 +10,8 @@
   </div>
   <div class="col-md-6">
     <div align="right" style="padding: 10px;">
-    <%= link_to 'New Content', new_content_path, :class => "btn btn-header" %>
-  </div>
+      <%= link_to 'New Content', new_content_path, :class => "btn btn-header" %>
+    </div>
     <% @contents.each do |content| %>
   <div class="tweetEntry">
   <div class="tweetEntry-content">
@@ -32,7 +32,9 @@
     </a>
     <div class="tweetEntry-text-container">
       <% begin %>
-       <%= image_tag content.image, :class => "img-responsive" %>
+      <div align="center">
+      <%= link_to image_tag(content.image), content.image, :class => "img-responsive", :id => "myImg" %>
+    </div>
      <% rescue %>
      <% end %>
     </div>

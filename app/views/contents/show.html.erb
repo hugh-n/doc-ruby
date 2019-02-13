@@ -7,12 +7,12 @@
       <h6><%= @content.title %></h6>
     </div>
       <% begin %>
-        <div align="center">
+        <div align="center" class="tweetEntry-text-container">
   	     <%= image_tag(@content.image, style:'width:100%') %>
         </div>
       <% rescue %>
       <% end %>
 
-      <%= link_to 'Edit', edit_content_path(@content) %> |
-      <%= link_to 'Back', contents_path %>
+      <%= link_to 'Edit', edit_content_path(@content), :class => "btn btn-header" %> |
+      <%= link_to 'Back', contents_path, :class => "btn btn-header" %>
   </div>
