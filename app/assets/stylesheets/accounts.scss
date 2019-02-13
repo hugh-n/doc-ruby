@@ -198,6 +198,12 @@ _nav.scss
     border-color: #6792AB;
 }
 
+.btn-options{
+    color: #8e8e8e;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
 .col-md-3 {
     top: 46px;
     left: 100px;
@@ -248,12 +254,6 @@ _nav.scss
   padding: 0px;
 }
 .tweetEntry-username {
-  font-weight: bold;
-  font-size: 14px;
-  color: #b1bbc3;
-  padding: 0px;
-}
-.tweetEntry-timestamp {
   font-size: 14px;
   color: #b1bbc3;
   padding: 0px;
@@ -354,21 +354,15 @@ h6 {
   color: #292f33;
   padding: 0px;
 }
-.tweetEntry-username {
-  font-weight: bold;
-  font-size: 14px;
-  color: #b1bbc3;
-  padding: 0px;
-}
-.tweetEntry-timestamp {
-  font-size: 14px;
-  color: #b1bbc3;
-  padding: 0px;
-}
 .tweetEntry-text-container {
   font-size: 14px;
   color: #292f33;
   line-height: 18px;
+}
+.tweetEntry-text-container img{
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .optionalMedia {

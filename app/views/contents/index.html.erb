@@ -8,15 +8,6 @@
         <b>DATE CREATED:</b> --</p>
       </div>
   </div>
-  <!-- <div class="col-md-6">
-    <div class="post" style="height: 100px">
-      <div class="form-group">
-        <textarea class="form-control" rows="2" id="post" placeholder="Write about your day here."></textarea>
-        <button type="button" class="btn btn-success" style="float: right; margin: 5px;">Create Post</button> 
-        <button type="button" class="btn btn-success" style="float: left; margin: 5px;"><i class="fa fa-image fa-2x" style="font-size: 20px;float: right;"></i></button>
-      </div>
-    </div>
-  </div> -->
   <div class="col-md-6">
     <div align="right" style="padding: 10px;">
     <%= link_to 'New Content', new_content_path, :class => "btn btn-header" %>
@@ -24,21 +15,24 @@
     <% @contents.each do |content| %>
   <div class="tweetEntry">
   <div class="tweetEntry-content">
+    <div class="dropdown" style="float: right;">
+        <button class="btn btn-options dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></button>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Show', content %></li>
+            <% if content.user == current_user %>
+            <li><%= link_to 'Edit', edit_content_path(content.id) %></li>
+            <li><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            <% end %>
+          </ul>
+      </div>
     <a class="tweetEntry-account-group" href="[accountURL]">
       <strong class="tweetEntry-fullname"><%= content.title %></strong>
-      <span class="tweetEntry-username"><b><%= content.user.email %></b></span>
-      <span class="tweetEntry-timestamp">- [timestamp]
-      - <%= link_to 'Show', content %>
-
-      <% if content.user == current_user %>
-      - <%= link_to 'Edit', edit_content_path(content.id) %><!-- <i class="fa fa-edit"></i> -->
-      - <%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %><!-- <i class="fa fa-trash"></i> -->
+      <span class="tweetEntry-username"><%= content.user.email %></span>
       </span>
-      <% end %>
     </a>
     <div class="tweetEntry-text-container">
       <% begin %>
-       <%= image_tag content.image, :style => "width: 500px;" %>
+       <%= image_tag content.image, :class => "img-responsive" %>
      <% rescue %>
      <% end %>
     </div>
