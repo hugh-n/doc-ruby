@@ -230,11 +230,6 @@ _nav.scss
   margin: auto;
   border-radius: 5px;
 }
-.tweetEntry-content {
-  display: block;
-  font-size: 14px;
-  font-size: 14px;
-}
 .tweetEntry-account-group {
   color: #8899a6;
   padding: 0px;
@@ -328,6 +323,7 @@ h6 {
   display: block;
   font-size: 14px;
   font-size: 14px;
+  min-height: 80px;
 }
 .tweetEntry-account-group {
   color: #8899a6;
