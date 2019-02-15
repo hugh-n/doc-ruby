@@ -121,7 +121,9 @@ _nav.scss
       min-width: 20rem;
       background: #FFF;
       border: 0;
-      color: #47AD5D;
+      color: #000;
+      font-size: 12px;
+      padding: 5px;
       @media (max-width: 900px) {
         display: none;
       }

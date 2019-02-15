@@ -1,1 +1,28 @@
-<%= render 'form', content: @content %>
+
+<div class="col-md-6">
+  <%= link_to 'Back', contents_path, :class => "btn btn-header", :style => "float: right" %>
+  <div class="sidebar-title">
+      <h2>Edit / Add Content</h2>
+    </div>
+  <%= form_with(model: content, local: true) do |form| %>
+  <% if content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+      <ul>
+      <% content.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="post" style="height: 100px; margin-top: 5px;">
+      <div class="form-group">
+        <%= form.text_area :title, :class => "form-control"  %>
+        <%= form.submit :class => "btn btn-header", :style => "float: right; margin-top: 10px;" %>
+        <%= form.file_field :image, :style => "margin-top: 10px;" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
